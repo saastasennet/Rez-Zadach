@@ -1,0 +1,11 @@
+// GitManager.h
+#include <string>
+using namespace std;
+
+class GitManager {
+public:
+    bool commitChanges(const string& message) {
+        string cmd = "git commit -m \"" + message + "\"";
+        return system(cmd.c_str()) == 0;
+    }
+};
