@@ -1,0 +1,17 @@
+#pragma once
+#include <string>
+#include <chrono>
+using namespace std;
+
+class Task {
+public:
+    Task(string desc, time_t deadline) 
+        : description(desc), deadline(deadline), completed(false) {}
+    
+    void markCompleted() { completed = true; }
+    
+private:
+    string description;
+    time_t deadline;
+    bool completed;
+};
