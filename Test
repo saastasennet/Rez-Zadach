@@ -1,0 +1,10 @@
+// test_Task.cpp
+#include "Task.h"
+#include <gtest/gtest.h>
+
+TEST(TaskTest, MarkCompleted) {
+    Task task("Implement feature", 0);
+    EXPECT_FALSE(task.isCompleted());
+    task.markCompleted();
+    EXPECT_TRUE(task.isCompleted());
+}
